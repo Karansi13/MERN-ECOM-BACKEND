@@ -1,0 +1,15 @@
+
+node_modules
+package-lock.json
+build
+json
+.env
+
+
+///  have to initialize an new git repo
+# dotenv environment variable files
+.env
+.env.development.local
+.env.test.local
+.env.production.local
+.env.local
