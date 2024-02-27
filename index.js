@@ -11,7 +11,6 @@ const jwt = require('jsonwebtoken');
 const JwtStrategy = require('passport-jwt').Strategy;
 const ExtractJwt = require('passport-jwt').ExtractJwt;
 const cookieParser = require('cookie-parser')
-const { createProduct } = require('./controller/Product');
 const productsRouter = require('./routes/Products');
 const categoriesRouter = require('./routes/Categories');
 const brandsRouter = require('./routes/Brands');
@@ -97,6 +96,9 @@ server.use('/auth', authRouter.router);
 server.use('/cart', isAuth(), cartRouter.router);
 // this /orders is clashing with react /orders
 server.use('/orders', isAuth(), ordersRouter.router);
+
+
+
 // this line we add to make react router work in case of other routes doesnt match
 server.get('*', (req , res) => res.sendFile(path.resolve('build', 'index.html')));
 
