@@ -34,7 +34,7 @@ exports.cookieExtractor = function(req) {
 exports.sendMail = async function({ to, subject, text, html }){
   
     let info = await transporter.sendMail({
-      from: '"E-commerce" karansinghk1307@gmail.com>', // sender address
+      from: '"Shoppiee" karansinghk1307@gmail.com', // sender address
       to: to,
       subject,
       text,
@@ -298,7 +298,7 @@ exports.invoiceTemplate = function(order){
  
                <a href="https://sendgrid.com" target="_blank" style="display: inline-block;">
  
-                 <img src="./img/paste-logo-light@2x.png" alt="Logo" border="0" width="48" style="display: block; width: 48px; max-width: 48px; min-width: 48px;">
+                 <img src="https://mern-ecom-three.vercel.app/ecommerce.png" alt="Logo" border="0" width="48" style="display: block; width: 48px; max-width: 48px; min-width: 48px;">
  
                </a>
  
