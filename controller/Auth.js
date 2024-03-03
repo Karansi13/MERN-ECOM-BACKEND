@@ -41,18 +41,7 @@ exports.createUser = async (req, res) => {
   }
 };
 
-// 3600 * 1000 means cookie will be valid for 1hr
-
-exports.loginUser = async (req, res) => {
-  const user = req.user;
-  res
-    .cookie("jwt", user.token, {
-      expires: new Date(Date.now() + 3600000),
-      httpOnly: true,
-    })
-    .status(201)
-    .json({ id: user.id, role: user.role });
-};
+// 3600 * 1000 => cookie valid for 1hr
 
 exports.loginUser = async (req, res) => {
   const user = req.user;
